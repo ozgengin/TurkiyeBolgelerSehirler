@@ -1,0 +1,18 @@
+﻿@using TurkiyeBolgelerSehirler.Classes
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Bolge>
+
+<h1>Türkiye'nin Bölgeleri</h1>
+
+
+<ul>
+    @foreach(var item in Model){
+         <li>
+            <a asp-controller="Home" asp-action="BolgeBilgi" asp-route-slug="@item.Slug">@item.BolgeAd</a>
+         </li>
+    }
+</ul>
+

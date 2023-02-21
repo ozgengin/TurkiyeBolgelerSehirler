@@ -1,0 +1,15 @@
+﻿@using TurkiyeBolgelerSehirler.Classes
+@model Sehir
+
+<h1>@Model.SehirAd</h1>
+
+<dl>
+    <dt>Plaka</dt>
+    <dd>@Model.Id</dd>
+    <dt>Nüfusu</dt>
+    <dd>@Model.Nufus.ToString("n0")</dd>
+    <dt>Bölgesi</dt>
+    <dd>@Model.Bolge.BolgeAd</dd>
+</dl>
+
+<a asp-action="BolgeBilgi" asp-route-slug="@Model.Bolge.Slug" class="btn btn-primary mt-2">Bölgeye Dön</a>

@@ -1,0 +1,14 @@
+﻿@using TurkiyeBolgelerSehirler.Classes
+@model List<Sehir>
+
+
+
+<div class="list-group">
+    @foreach(var item in Model){
+        <a class="list-group-item list-group-item-action" asp-controller="Home" asp-action="SehirBilgi" asp-route-slug="@item.Slug">@item.SehirAd</a>
+    }
+
+</div>
+
+<a asp-action="Index" class="btn btn-primary mt-2">Anasayfaya Dön</a>
+
